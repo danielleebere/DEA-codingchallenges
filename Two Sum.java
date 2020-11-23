@@ -4,10 +4,13 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         
-        int[] solution = new int[2]; //created an array of size 2, to store the indices of the two numbers that sum to target
+        //created an array of size 2, to store the indices of the two numbers that sum to target
+        int[] solution = new int[2]; 
         
-        for(int i = 0; i<nums.length; i++){ //nested for loop to iterate through the nums array
-            for(int j = i+1; j<nums.length; j++){ //made j = i+1, to avoid adding the same index values together
+        //nested for loop to iterate through the nums array
+        //made j = i+1, to avoid adding the same index values together
+        for(int i = 0; i<nums.length; i++){ 
+            for(int j = i+1; j<nums.length; j++){ 
                 if(nums[i] + nums[j] == target){
                     solution[0] = i;
                     solution[1] = j;
