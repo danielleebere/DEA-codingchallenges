@@ -18,7 +18,13 @@ class Solution {
         }
         
         //converts the reversed number back to int
-        int reversedNumber = Integer.parseInt(reversed);
+        //catches numberformatexception 
+        int reversedNumber = 0;
+        try{
+            reversedNumber = Integer.parseInt(reversed);
+        } catch (NumberFormatException e){
+            reversedNumber = 0;
+        }
         
         //if the number was negative, makes it negative again and updates reversedNumber
         if (ch == '-')
